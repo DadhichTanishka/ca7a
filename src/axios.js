@@ -35,7 +35,7 @@ function Site(){
                     {post.map((e)=>
                     <div className="booky">
                     <h1>{e.volumeInfo.title}</h1>
-                    {e.volumeInfo.imageLinks?<img src={e.volumeInfo.imageLinks.thumbnail} alt=""></img>: <img src="https://onlinebookclub.org/book-covers/no-cover.jpg"/>}
+                    {e.volumeInfo.imageLinks?<img src={e.volumeInfo.imageLinks.thumbnail} alt=""></img>: <img src="https://onlinebookclub.org/book-covers/no-cover.jpg" alt=""/>}
                     </div>
                     )
                     }
