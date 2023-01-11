@@ -13,8 +13,9 @@ function Site(){
     }
     const[post,setpost]=useState(null);
     const[searchs,newSearch]=useState("react");
-    const baseURL=`https://www.googleapis.com/books/v1/volumes?q=${searchs}`
+    
     useEffect(()=>{
+        const baseURL=`https://www.googleapis.com/books/v1/volumes?q=${searchs}`
         axios.get(baseURL)
         .then((response)=>{
             console.log(response.data.items )
@@ -34,7 +35,7 @@ function Site(){
                     {post.map((e)=>
                     <div className="booky">
                     <h1>{e.volumeInfo.title}</h1>
-                    {e.volumeInfo.imageLinks?<img src={e.volumeInfo.imageLinks.thumbnail}></img>: <img src="https://onlinebookclub.org/book-covers/no-cover.jpg"/>}
+                    {e.volumeInfo.imageLinks?<img src={e.volumeInfo.imageLinks.thumbnail} alt=""></img>: <img src="https://onlinebookclub.org/book-covers/no-cover.jpg"/>}
                     </div>
                     )
                     }
