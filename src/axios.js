@@ -3,14 +3,6 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 function Site(){
-    
-    const register=()=>{
-        <div>
-        console.log("hello")
-        {/* <div>hello</div> */}
-        </div>
-        
-    }
     const[post,setpost]=useState(null);
     const[searchs,newSearch]=useState("react");
     
